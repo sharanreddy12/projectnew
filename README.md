@@ -105,26 +105,31 @@ Microphone → Audio Stream → Wake Word Detection → Command Recognition → 
 
 ### Software Dependencies
 ```bash
-# Core dependencies
-mediapipe>=0.10.0
-opencv-python>=4.8.0
-numpy>=1.24.0
-pyautogui>=0.9.54
-
-# Voice recognition
-vosk>=0.3.45
-PyAudio>=0.2.11
-SpeechRecognition>=3.10.0
-
-# System control
-screen-brightness-control>=0.1.0
-pycaw>=2023.9.3
-comtypes>=1.2.0
-
-# Text processing
-fuzzywuzzy>=0.18.0
-python-Levenshtein>=0.12.2
+# Install all dependencies from the unified requirements.txt
+pip install -r requirements.txt
 ```
+
+The main `requirements.txt` includes all necessary packages for both gesture and voice control:
+
+**Core Dependencies:**
+- `mediapipe>=0.10.0` - Hand tracking and gesture recognition
+- `opencv-python>=4.8.0` - Computer vision and image processing
+- `numpy>=1.24.0` - Numerical computations
+- `pyautogui>=0.9.54` - Mouse and keyboard automation
+
+**Speech Recognition:**
+- `vosk>=0.3.45` - Offline speech recognition engine
+- `PyAudio>=0.2.11` - Audio stream management
+- `SpeechRecognition>=3.10.0` - Speech recognition utilities
+
+**System Control:**
+- `screen-brightness-control>=0.4.0` - Display brightness management
+- `pycaw>=2023.9.3` - Windows audio control
+- `comtypes>=1.2.0` - COM interface for Windows
+
+**Text Processing:**
+- `fuzzywuzzy>=0.18.0` - String matching for voice commands
+- `python-Levenshtein>=0.12.2` - Text similarity calculations
 
 ## 🚀 Installation
 
@@ -157,6 +162,8 @@ mkdir voice_assistant/models
 # Visit: https://alphacephei.com/vosk/models
 # Download and extract to: voice_assistant/models/vosk-model-small-en-us-0.15
 ```
+
+**Note:** The project now uses a unified `requirements.txt` file in the root directory. The duplicate `voice_assistant/requirements.txt` has been removed to avoid confusion.
 
 ## 🎯 Quick Start
 
